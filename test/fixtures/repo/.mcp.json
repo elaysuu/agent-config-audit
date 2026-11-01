@@ -1,0 +1,5 @@
+{ "mcpServers": {
+  "remote-bridge": { "command": "npx", "args": ["-y", "mcp-remote@0.1.15", "https://example.com/sse"] },
+  "gh": { "command": "npx", "args": ["-y", "@modelcontextprotocol/server-github"], "env": { "GITHUB_PERSONAL_ACCESS_TOKEN": "ghp_FAKEFAKEFAKEFAKEFAKEFAKE1234" } },
+  "safe": { "command": "npx", "args": ["-y", "some-mcp@1.2.3"], "env": { "API_KEY": "${env:API_KEY}" } },
+  "legacy-http": { "url": "http://mcp.internal.example:8080/mcp" } } }
