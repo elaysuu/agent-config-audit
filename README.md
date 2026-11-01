@@ -23,3 +23,13 @@ Buy the Team report pack: https://setrov.gumroad.com/l/cpclzn
 `--brand brand.json` branded print-to-PDF HTML, `--json out.json` CI JSON (schema/report.schema.json), `--fail-on HIGH` CI exit code. Key via `--key` or `AGENT_AUDIT_KEY`.
 
 MIT. Advisory data: AKRENON Security (CC BY 4.0), OSV.dev.
+
+## Also available as
+
+- VS Code / Open VSX extension: https://open-vsx.org/extension/elaysuu/agent-package-advisory
+- RapidAPI (HTTP API): https://rapidapi.com/Elayosetrov/api/agent-package-advisory-check
+- Apify actor: https://apify.com/crimson_goby/osv-package-checker
+
+
+
+
