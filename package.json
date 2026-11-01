@@ -1,0 +1,4 @@
+{ "name": "agent-config-audit", "version": "1.0.1", "description": "Audit every MCP config on your machine or repo: known advisories, unpinned packages, plaintext secrets, http remotes. One-page HTML report.",
+  "bin": { "agent-config-audit": "bin/cli.js" }, "files": ["bin", "src", "schema", "data", "README.md", "LICENSE"],
+  "scripts": { "test": "node --test test/" }, "engines": { "node": ">=18" }, "license": "MIT",
+  "repository": "github:elaysuu/agent-config-audit", "keywords": ["mcp", "security", "claude", "cursor", "audit", "ai-agents"] }
