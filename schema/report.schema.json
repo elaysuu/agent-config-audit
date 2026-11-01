@@ -1,0 +1,12 @@
+{ "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://github.com/elaysuu/agent-config-audit/schema/report.schema.json",
+  "title": "agent-config-audit report", "type": "object", "required": ["version", "generated", "score", "grade", "summary", "configs"],
+  "properties": {
+    "version": { "const": 1 }, "generated": { "type": "string", "format": "date-time" }, "host": { "type": "string" },
+    "score": { "type": "integer", "minimum": 0, "maximum": 100 }, "grade": { "enum": ["A", "B", "C", "D", "F"] },
+    "summary": { "type": "object", "required": ["configs", "servers", "advisory", "unpinned", "secrets", "http"], "additionalProperties": { "type": "integer" } },
+    "configs": { "type": "array", "items": { "type": "object", "required": ["source", "file", "servers"], "properties": {
+      "source": { "type": "string" }, "file": { "type": "string" }, "error": { "type": "string" },
+      "servers": { "type": "array", "items": { "type": "object", "required": ["name", "findings"], "properties": {
+        "name": { "type": "string" }, "pkg": { "type": ["object", "null"] },
+        "findings": { "type": "array", "items": { "type": "object", "required": ["type", "sev", "msg"], "properties": {
+          "type": { "enum": ["advisory", "unpinned", "plaintext-secret", "http-remote"] }, "sev": { "enum": ["CRITICAL", "HIGH", "MEDIUM", "MODERATE", "LOW"] }, "id": { "type": "string" }, "msg": { "type": "string" } } } } } } } } } } } }
